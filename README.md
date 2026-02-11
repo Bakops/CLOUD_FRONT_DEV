@@ -1,3 +1,27 @@
+# CI/CD & Déploiement Front Cloud
+
+## Membres du groupe
+- Jean Dupont
+- Marie Durand
+
+## Fonctionnalités
+- Le front Next.js récupère les données de l'API Cloud Run et les affiche sur /items
+- Les noms/prénoms du groupe sont affichés sur la même page
+
+## CI/CD
+- Dockerfile pour builder et servir le front
+- cloudbuild.yaml pour builder, push et déployer automatiquement sur Cloud Run après un push sur la branche principale
+
+## Variables à personnaliser
+- `REGION`, `PROJECT_ID`, `artifact-registry-repo` dans cloudbuild.yaml
+- L'URL de l'API dans `app/items.tsx`
+
+## Démonstration
+- Après un push sur main, le front est rebuild et déployé automatiquement
+- Les données affichées sont celles de l'API (mettre à jour l'API, puis vérifier le front)
+
+## Bonus
+- Ajoutez toute amélioration ou documentation supplémentaire ici pour la notation
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
