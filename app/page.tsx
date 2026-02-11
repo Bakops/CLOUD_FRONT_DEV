@@ -4,8 +4,9 @@ import Link from "next/link";
 
 export default function Home() {
   const groupMembers = [
-    { nom: 'Dupont', prenom: 'Jean' },
-    { nom: 'Durand', prenom: 'Marie' },
+  { prenom: 'Bakou', nom: 'Toure' },
+  { prenom: 'Jused', nom: 'Adinsi' },
+  { prenom: 'Mahboubi', nom: 'Adnan' }
   ];
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">

@@ -2,9 +2,9 @@ import React from 'react';
 
 // À personnaliser avec les noms/prénoms du groupe
 const groupMembers = [
-  { nom: 'Toure', prenom: 'Bakou' },
-  { nom: 'Adinsi', prenom: 'Jused' },
-  { nom: 'Adnane', prenom: 'Mahboubi' }
+  { prenom: 'Bakou', nom: 'Toure' },
+  { prenom: 'Jused', nom: 'Adinsi' },
+  { prenom: 'Mahboubi', nom: 'Adnan' }
 ];
 
 // Modifier cette URL pour pointer vers votre API Cloud Run
