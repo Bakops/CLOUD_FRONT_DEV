@@ -2,12 +2,13 @@ import React from 'react';
 
 // À personnaliser avec les noms/prénoms du groupe
 const groupMembers = [
-  { nom: 'Dupont', prenom: 'Jean' },
-  { nom: 'Durand', prenom: 'Marie' },
+  { nom: 'Toure', prenom: 'Bakou' },
+  { nom: 'Adinsi', prenom: 'Jused' },
+  { nom: 'Adnane', prenom: 'Mahboubi' }
 ];
 
 // Modifier cette URL pour pointer vers votre API Cloud Run
-const API_URL = 'https://monProjet.region.run.app/items';
+const API_URL = 'https://powerpoint-node-96724924534.europe-west1.run.app';
 
 async function fetchItems() {
   try {
