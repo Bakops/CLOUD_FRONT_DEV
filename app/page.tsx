@@ -35,7 +35,7 @@ export default function Home() {
             </ul>
           </div>
           <p>
-            <Link href="/items" style={{ color: 'blue', textDecoration: 'underline', fontWeight: 'bold', fontSize: 18 }}>
+            <Link href="/items" style={{ color: 'red', textDecoration: 'underline', fontWeight: 'bold', fontSize: 18 }}>
               → Voir la liste des items (API)
             </Link>
           </p>
