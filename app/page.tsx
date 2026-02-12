@@ -1,45 +1,26 @@
-import Image from "next/image";
 import Link from "next/link";
+
+// Import Google Fonts Poppins (Next.js 13+)
+import { Poppins } from 'next/font/google';
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600', '700'] });
 
 
 export default function Home() {
-  const groupMembers = [
-  { prenom: 'Bakou', nom: 'Toure' },
-  { prenom: 'Jused', nom: 'Adinsi' },
-  { prenom: 'Mahboubi', nom: 'Adnan' }
-  ];
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Bienvenue sur le projet Front Cloud
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Ce projet affiche les données de lAPI Cloud Run et met en avant la CI/CD Google Cloud Build.
-          </p>
-          <div className="my-4">
-            <strong>Membres du groupe :</strong>
-            <ul>
-              {groupMembers.map((m, i) => (
-                <li key={i}>{m.prenom} {m.nom}</li>
-              ))}
-            </ul>
-          </div>
-          <p>
-            <Link href="/items" style={{ color: 'red', textDecoration: 'underline', fontWeight: 'bold', fontSize: 18 }}>
-              → Voir la liste des items (API)
-            </Link>
-          </p>
-        </div>
+    <div className={`min-h-screen flex items-center justify-center bg-black ${poppins.className}`}>
+      <main className="w-full max-w-4xl flex flex-col items-center justify-center ">
+        <h1 className="text-8xl font-extrabold text-white mb-4 text-center tracking-tight">
+          Front Cloud
+        </h1>
+        <p className="text-md text-gray-200 mb-10 text-center max-w-md">
+          Application Next.js moderne connectée à une API Cloud Run.
+          Déploiement CI/CD automatique avec Google Cloud Build.
+        </p>
+        <Link href="/items" className="w-full flex justify-center">
+          <button className="px-8 py-3 animate-bounce rounded-full bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-xl hover:scale-105 hover:from-blue-700 hover:to-pink-600 transition-all duration-200">
+            Voir la liste des items
+          </button>
+        </Link>
       </main>
     </div>
   );
