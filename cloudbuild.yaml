@@ -4,7 +4,7 @@ steps:
     args:
       [
         'build',
-        '-t', 'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-node:$SHORT_SHA',
+        '-t', 'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-front:$SHORT_SHA',
         '.'
       ]
  
@@ -13,7 +13,7 @@ steps:
     args:
       [
         'push',
-        'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-node:$SHORT_SHA'
+        'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-front:$SHORT_SHA'
       ]
  
   # Étape 3 : Déployer sur Cloud Run
@@ -21,8 +21,8 @@ steps:
     entrypoint: 'gcloud'
     args:
       [
-        'run', 'deploy', 'powerpoint-node',
-        '--image', 'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-node:$SHORT_SHA',
+        'run', 'deploy', 'powerpoint-front',
+        '--image', 'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-front:$SHORT_SHA',
         '--region', 'europe-west1',
         '--platform', 'managed',
         '--allow-unauthenticated',
@@ -30,7 +30,7 @@ steps:
       ]
  
 images:
-  - 'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-node:$SHORT_SHA'
+  - 'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-front:$SHORT_SHA'
  
 options:
   logging: CLOUD_LOGGING_ONLY

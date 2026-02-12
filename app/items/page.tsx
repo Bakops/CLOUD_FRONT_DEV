@@ -1,13 +1,7 @@
 import React from 'react';
 
-// À personnaliser avec les noms/prénoms du groupe
-const groupMembers = [
-  { prenom: 'Bakou', nom: 'Toure' },
-  { prenom: 'Jused', nom: 'Adinsi' },
-  { prenom: 'Mahboubi', nom: 'Adnan' }
-];
 
-// Modifier cette URL pour pointer vers votre API Cloud Run
+// URL de l'API
 const API_URL = 'https://powerpoint-node-96724924534.europe-west1.run.app/items';
 
 async function fetchItems() {
@@ -35,12 +29,7 @@ export default async function ItemsPage() {
         )}
       </ul>
       <hr />
-      <h2>Membres du groupe</h2>
-      <ul>
-        {groupMembers.map((m, i) => (
-          <li key={i}>{m.prenom} {m.nom}</li>
-        ))}
-      </ul>
+      
     </main>
   );
 }
