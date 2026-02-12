@@ -40,7 +40,7 @@ export default async function ItemsPage() {
         </ul>
         <Link href="/" className="mt-6">
           <button className="px-6 py-2 rounded-full hover:scale-105 cursor-pointer bg-white text-black font-bold text-base shadow hover:bg-gray-200 transition">
-            Retour à l'accueil
+            Retour à laccueil
           </button>
         </Link>
       </main>
