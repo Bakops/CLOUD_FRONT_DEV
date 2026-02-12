@@ -1,5 +1,4 @@
 steps:
-  # Étape 1 : Construire l'image Docker à partir du Dockerfile
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
@@ -7,8 +6,8 @@ steps:
         '-t', 'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-front:$SHORT_SHA',
         '.'
       ]
- 
-  # Étape 2 : Pousser l'image dans Artifact Registry
+  
+
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
@@ -16,7 +15,6 @@ steps:
         'europe-west1-docker.pkg.dev/$PROJECT_ID/powerpoint-node-repo/powerpoint-front:$SHORT_SHA'
       ]
  
-  # Étape 3 : Déployer sur Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args:

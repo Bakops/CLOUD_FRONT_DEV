@@ -17,7 +17,7 @@ export default function Home() {
         </p>
         <Link href="/items" className="w-full flex justify-center">
           <button className="px-8 py-3 cursor-pointer animate-bounce rounded-full bg-linear-to-r from-blue-600 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-xl hover:scale-105 hover:from-blue-700 hover:to-pink-600 transition-all duration-200">
-            Voir la liste des items
+            ALLO
           </button>
         </Link>
       </main>
